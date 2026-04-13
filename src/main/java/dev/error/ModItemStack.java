@@ -37,7 +37,7 @@ public class ModItemStack {
                     NbtIo.writeCompressed((NbtCompound) tag, cs);
                     compressed = cs.size();
                 } catch (IOException e) {
-                    NBTSize.LOGGER.error("failed to write compressed tag: {}", e);
+                    NBTSize.LOGGER.error("failed to write compressed tag", e);
                 }
 
                 if (NBTSize.CONFIG.showUncompressed) {
@@ -46,14 +46,13 @@ public class ModItemStack {
                         NbtIo.write((NbtCompound) tag, new DataOutputStream(us));
                         uncompressed = us.size();
                     } catch (IOException e) {
-                        NBTSize.LOGGER.error("failed to write uncompressed tag: {}", e);
+                        NBTSize.LOGGER.error("failed to write uncompressed tag", e);
                     }
                 }
 
                 return new SizeResult(compressed, uncompressed);
             });
         } catch (Exception e) {
-            NBTSize.LOGGER.error("cache execution failed: {}", e);
             return;
         }
 
