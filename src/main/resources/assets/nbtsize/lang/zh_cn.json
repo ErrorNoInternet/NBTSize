@@ -1,0 +1,9 @@
+{
+  "text.autoconfig.nbtsize.title": "NBTSize",
+  "text.autoconfig.nbtsize.option.enable": "启用提示信息",
+  "text.autoconfig.nbtsize.option.showUncompressed": "显示未压缩字节大小",
+  "text.autoconfig.nbtsize.option.compressedFormat": "压缩文本格式",
+  "text.autoconfig.nbtsize.option.uncompressedFormat": "未压缩文本格式",
+  "text.nbtsize.label.compressedFormat": "压缩大小: %%,d 字节",
+  "text.nbtsize.label.uncompressedFormat": "未压缩大小: %%,d 字节"
+}

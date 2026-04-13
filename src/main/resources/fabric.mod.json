@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "nbtsize",
+  "version": "0.1.0",
+  "name": "NBTSize",
+  "description": "Display the byte size of an item's NBT data",
+  "authors": [
+    "ErrorNoInternet"
+  ],
+  "contact": {
+    "homepage": "https://github.com/ErrorNoInternet/NBTSize",
+    "sources": "https://github.com/ErrorNoInternet/NBTSize"
+  },
+  "license": "LGPL-3.0-only",
+  "icon": "assets/nbtsize/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.error.NBTSize"
+    ],
+    "modmenu": [
+      "dev.error.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "nbtsize.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.1",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
