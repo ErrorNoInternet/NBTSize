@@ -2,6 +2,7 @@
   "text.autoconfig.nbtsize.title": "NBTSize",
   "text.autoconfig.nbtsize.option.enable": "Enable tooltips",
   "text.autoconfig.nbtsize.option.showUncompressed": "Show uncompressed byte size",
+  "text.autoconfig.nbtsize.option.cacheSize": "Cache size",
   "text.autoconfig.nbtsize.option.compressedFormat": "Compressed text format",
   "text.autoconfig.nbtsize.option.uncompressedFormat": "Uncompressed text format",
   "text.nbtsize.label.compressedFormat": "Packed Size: %%,d bytes",

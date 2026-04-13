@@ -8,6 +8,7 @@ import net.minecraft.client.resource.language.I18n;
 public class ModConfig implements ConfigData {
     public boolean enable = true;
     public boolean showUncompressed = true;
+    public int cacheSize = 64;
     public String compressedFormat = I18n.translate("text.nbtsize.label.compressedFormat");
     public String uncompressedFormat = I18n.translate("text.nbtsize.label.uncompressedFormat");
 }

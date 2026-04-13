@@ -1,6 +1,7 @@
 package dev.error.mixin;
 
 import dev.error.ModItemStack;
+import dev.error.NBTSize;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
