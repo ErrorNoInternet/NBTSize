@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "nbtsize",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "NBTSize",
   "description": "Display the byte size of an item's NBT data",
   "authors": [
