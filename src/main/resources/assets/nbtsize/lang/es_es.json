@@ -1,0 +1,10 @@
+{
+  "text.autoconfig.nbtsize.title": "NBTSize",
+  "text.autoconfig.nbtsize.option.enable": "Activar descripciones",
+  "text.autoconfig.nbtsize.option.showUncompressed": "Mostrar tamaño descomprimido",
+  "text.autoconfig.nbtsize.option.cacheSize": "Tamaño de cache",
+  "text.autoconfig.nbtsize.option.compressedFormat": "Formato de texto comprimido",
+  "text.autoconfig.nbtsize.option.uncompressedFormat": "Formato de texto descomprimido",
+  "text.nbtsize.label.compressedFormat": "Tamaño Empaquetado: %%,d bytes",
+  "text.nbtsize.label.uncompressedFormat": "Tamaño Bruto: %%,d bytes"
+}
