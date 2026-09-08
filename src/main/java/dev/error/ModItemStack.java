@@ -57,10 +57,14 @@ public class ModItemStack {
         }
 
         Formatting formatting = Formatting.DARK_GRAY;
-        if (result.compressed() > 0)
+        if (result.compressed() > 0) try {
             list.add(Text.literal(String.format(NBTSize.CONFIG.compressedFormat, result.compressed())).formatted(formatting));
-        if (NBTSize.CONFIG.showUncompressed && result.uncompressed() > 0)
+        } catch (Exception e) {
+        }
+        if (NBTSize.CONFIG.showUncompressed && result.uncompressed() > 0) try {
             list.add(Text.literal(String.format(NBTSize.CONFIG.uncompressedFormat, result.uncompressed())).formatted(formatting));
+        } catch (Exception e) {
+        }
     }
 
     private record ItemStackKey(ItemStack stack) {
