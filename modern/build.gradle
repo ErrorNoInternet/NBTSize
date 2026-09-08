@@ -1,10 +1,14 @@
 plugins {
-    id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
+    id 'net.fabricmc.fabric-loom'
     id 'maven-publish'
 }
 
 version = "${project.mod_version}+${project.minecraft_version}"
 group = project.maven_group
+
+base {
+    archivesName = rootProject.name
+}
 
 repositories {
     maven { url "https://maven.architectury.dev/" }
@@ -14,17 +18,16 @@ repositories {
 
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings "net.fabricmc:yarn:${project.minecraft_version}+build.4:v2"
 
-    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-    modImplementation "net.fabricmc.fabric-api:fabric-api:0.141.3+${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
-    modApi "dev.architectury:architectury-fabric:19.0.1"
-    modApi "me.shedaniel.cloth:cloth-config-fabric:21.11.153"
-    modApi "com.terraformersmc:modmenu:17.0.0"
+    api "dev.architectury:architectury-fabric:${project.architectury_version}"
+    api "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}"
+    api "com.terraformersmc:modmenu:${project.modmenu_version}"
 }
 
-sourceSets.main.resources.srcDir 'common'
+sourceSets.main.resources.srcDir rootProject.file('common')
 
 processResources {
     inputs.property "version", project.version
@@ -35,21 +38,21 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-    it.options.release = 21
+    it.options.release = 25
 }
 
 java {
     withSourcesJar()
 
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
 }
 
 jar {
-    inputs.property "projectName", project.name
+    inputs.property "projectName", rootProject.name
 
-    from("LICENSE") {
-        rename { "${it}_${project.name}" }
+    from(rootProject.file("LICENSE")) {
+        rename { "${it}_${rootProject.name}" }
     }
 }
 
